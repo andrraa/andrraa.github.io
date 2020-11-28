@@ -231,16 +231,12 @@ header nav ul li a {
 	text-align: center;
 }
 
-.gallery-links .gallery-link {
-	float: left;
-	width: 230px;
-	height: 230px;
-	margin: 20px 10px 0px;
-	background-color: #E3E3E3;
-}
-
 .gallery-links .gallery-link img {
-	margin: 15px 15px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	width: 200px;
 	height: 200px;
 }
@@ -248,6 +244,14 @@ header nav ul li a {
 @media only screen and (min-width: 1000px) {
 	.gallery-links h2 {
 		text-align: left;
+	}
+
+	.gallery-links .gallery-link {
+		float: left;
+		width: 230px;
+		height: 230px;
+		margin: 20px 10px 0px;
+		background-color: #E3E3E3;
 	}
 }
 
@@ -279,7 +283,7 @@ header nav ul li a {
 .about-vid p {
 	font-family: Catamaran;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 400;
 	line-height: 24px;
 	color: #111;
 	text-transform: uppercase;
@@ -287,22 +291,40 @@ header nav ul li a {
 	column-gap: 20px;
 }
 
+@media only screen and (max-width: 480px) {
+	.about-vid video {
+		display: block;
+		margin: 0 auto;
+		padding: 30px 0;
+		height: 350px;
+		width: 350px;
+	}
+}
+
 /*CONTACT US*/
 
 .contact-links h2 {
-	font-family: Catamaran;
+	font-family: 'Catamaran', sans-serif;
 	font-size: 28px;
-	font-weight: 600;
+	font-weight: 600px;
 	color: #111;
-	padding-bottom: 25px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 .contact-links p {
 	font-family: Catamaran;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 400;
 	line-height: 24px;
 	color: #111;
+}
+
+@media only screen and (min-width: 1000px) {
+	.contact-links h2 {
+		text-align: left;
+	}
 }
 
 /*Footer*/
