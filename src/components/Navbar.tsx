@@ -32,9 +32,9 @@ export function Navbar({ theme, onToggleTheme, onNavigate }: NavbarProps) {
               e.preventDefault();
               onNavigate('#stack');
             }}
-            className="font-mono-tech border-2 border-transparent px-2.5 py-1.5 text-sm font-medium text-[var(--ink)] transition-colors hover:border-[var(--ink)] hover:bg-[var(--surface)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--ink)]"
+            className="font-mono-tech hidden border-2 border-transparent px-2.5 py-1.5 text-sm font-medium text-[var(--ink)] transition-colors hover:border-[var(--ink)] hover:bg-[var(--surface)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--ink)] sm:inline-flex"
           >
-            Stack
+            Scope
           </a>
           <a
             href="#ai"
@@ -43,7 +43,7 @@ export function Navbar({ theme, onToggleTheme, onNavigate }: NavbarProps) {
               e.preventDefault();
               onNavigate('#ai');
             }}
-            className="font-mono-tech border-2 border-transparent px-2.5 py-1.5 text-sm font-medium text-[var(--ink)] transition-colors hover:border-[var(--ink)] hover:bg-[var(--surface)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--ink)]"
+            className="font-mono-tech hidden border-2 border-transparent px-2.5 py-1.5 text-sm font-medium text-[var(--ink)] transition-colors hover:border-[var(--ink)] hover:bg-[var(--surface)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--ink)] sm:inline-flex"
           >
             AI
           </a>
@@ -54,7 +54,7 @@ export function Navbar({ theme, onToggleTheme, onNavigate }: NavbarProps) {
               e.preventDefault();
               onNavigate('#contact');
             }}
-            className="font-mono-tech border-2 border-transparent px-2.5 py-1.5 text-sm font-medium text-[var(--ink)] transition-colors hover:border-[var(--ink)] hover:bg-[var(--surface)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--ink)]"
+            className="font-mono-tech hidden border-2 border-transparent px-2.5 py-1.5 text-sm font-medium text-[var(--ink)] transition-colors hover:border-[var(--ink)] hover:bg-[var(--surface)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--ink)] sm:inline-flex"
           >
             Contact
           </a>

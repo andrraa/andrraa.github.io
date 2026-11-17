@@ -1,10 +1,9 @@
-export interface TechItem {
-  name: string;
+export interface CapabilityItem {
   code: string;
-  category: 'Backend' | 'Frontend' | 'Database' | 'DevOps';
-  note: string;
-  span?: 'wide' | 'normal';
-  tone: 'yellow' | 'coral' | 'sky' | 'mint' | 'paper';
+  title: string;
+  summary: string;
+  tools: string[];
+  tone: 'yellow' | 'coral' | 'sky' | 'paper';
 }
 
 export interface AiModelItem {
@@ -33,82 +32,38 @@ export const portfolioData = {
     subtext:
       'I work across PHP, Laravel, Go, and Next.js—turning complex business logic into fast, maintainable systems.',
     primaryCta: 'Get in touch',
-    secondaryCta: 'Tech stack',
+    secondaryCta: 'What I handle',
   },
-  techStack: [
+  capabilities: [
     {
-      name: 'Go',
-      code: 'GO',
-      category: 'Backend',
-      note: 'Concurrent services & fast APIs',
-      span: 'wide',
-      tone: 'sky',
-    },
-    {
-      name: 'Laravel',
-      code: 'LV',
-      category: 'Backend',
-      note: 'Full-featured web apps & queues',
-      span: 'normal',
-      tone: 'coral',
-    },
-    {
-      name: 'PHP',
-      code: 'PHP',
-      category: 'Backend',
-      note: 'Production web systems',
-      span: 'normal',
-      tone: 'paper',
-    },
-    {
-      name: 'Next.js',
-      code: 'NX',
-      category: 'Frontend',
-      note: 'React, SSR & static interfaces',
-      span: 'wide',
+      code: '01',
+      title: 'Backend & APIs',
+      summary: 'Services, queues, and clean business logic built to hold up under real traffic.',
+      tools: ['Go', 'Laravel', 'PHP'],
       tone: 'yellow',
     },
     {
-      name: 'PostgreSQL',
-      code: 'PG',
-      category: 'Database',
-      note: 'Relational modeling & tuning',
-      span: 'normal',
-      tone: 'mint',
-    },
-    {
-      name: 'MySQL',
-      code: 'MY',
-      category: 'Database',
-      note: 'Transactional workloads',
-      span: 'normal',
-      tone: 'paper',
-    },
-    {
-      name: 'SQL Server',
-      code: 'MS',
-      category: 'Database',
-      note: 'Enterprise queries & procs',
-      span: 'normal',
-      tone: 'coral',
-    },
-    {
-      name: 'Docker',
-      code: 'DK',
-      category: 'DevOps',
-      note: 'Containers & local parity',
-      span: 'normal',
+      code: '02',
+      title: 'Data & Query Tuning',
+      summary: 'Schema design, indexing, and untangling slow queries across relational engines.',
+      tools: ['PostgreSQL', 'SQL Server', 'MySQL'],
       tone: 'sky',
     },
     {
-      name: 'Git',
-      code: 'GIT',
-      category: 'DevOps',
-      note: 'Clean commits & workflows',
-      span: 'wide',
-      tone: 'yellow',
+      code: '03',
+      title: 'Web Interfaces',
+      summary: 'Fast, responsive frontends without unnecessary client-side bloat.',
+      tools: ['Next.js', 'TypeScript', 'Tailwind'],
+      tone: 'coral',
     },
-  ] satisfies TechItem[],
+    {
+      code: '04',
+      title: 'Shipping & Infra',
+      summary: 'Reproducible environments, clean git history, and automated deploys.',
+      tools: ['Docker', 'Git', 'GitHub Actions'],
+      tone: 'paper',
+    },
+  ] satisfies CapabilityItem[],
   aiCrew: [
     {
       id: 'deepseek',
