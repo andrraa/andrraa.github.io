@@ -2,7 +2,7 @@
 
 A 1-page Neobrutalist static portfolio built with React, TypeScript, Tailwind CSS v4, and Lenis.
 
-Live site: [https://andrraa.github.io](https://andrraa.github.io)
+Live site: [https://haluboyys.github.io](https://haluboyys.github.io)
 
 ## Highlights
 
