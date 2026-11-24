@@ -2,6 +2,7 @@ import { act, fireEvent, render, screen } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { AiWhipSection } from './components/AiWhipSection';
 import { Contact } from './components/Contact';
+import { Hero } from './components/Hero';
 import { HeroCharacters } from './components/HeroCharacters';
 import { Navbar } from './components/Navbar';
 import { portfolioData } from './data/portfolio';
@@ -69,6 +70,22 @@ describe('Portfolio interactions', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Whip DeepSeek' }));
 
     expect(screen.getByText('Whips: 1')).toBeInTheDocument();
+    expect(screen.getByRole('status')).toBeInTheDocument();
+  });
+
+  it('renders static PixelAvatar fallback in Hero when WebGL is unavailable', () => {
+    render(<Hero theme="light" onNavigate={vi.fn()} />);
+
+    expect(screen.getByRole('img', { name: /pixel art developer avatar/i })).toBeInTheDocument();
+    expect(screen.getByText('AVATAR.PX')).toBeInTheDocument();
+  });
+
+  it('whips all AI models cleanly in dark mode without WebGL', () => {
+    render(<AiWhipSection theme="dark" />);
+
+    fireEvent.click(screen.getByRole('button', { name: /whip all/i }));
+
+    expect(screen.getByText('Whips: 5')).toBeInTheDocument();
     expect(screen.getByRole('status')).toBeInTheDocument();
   });
 });

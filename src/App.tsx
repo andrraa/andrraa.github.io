@@ -54,7 +54,7 @@ export function App() {
       <main className="flex-1">
         <Hero theme={theme} onNavigate={handleNavigate} />
         <TechStack />
-        <AiWhipSection />
+        <AiWhipSection theme={theme} />
         <Contact />
       </main>
 
