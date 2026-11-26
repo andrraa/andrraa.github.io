@@ -139,8 +139,8 @@ export const portfolioData = {
     links: [
       {
         label: 'GitHub',
-        handle: '@haluboyys',
-        href: 'https://github.com/haluboyys',
+        handle: '@andrraa',
+        href: 'https://github.com/andrraa',
         cursorLabel: 'GIT',
       },
       {
